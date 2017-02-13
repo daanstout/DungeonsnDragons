@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 
 namespace Loot_Randomizer {
     public static class Referal {
-        public static string mapName = "Loot Tables";
+        public static string lootTablesMapName = "Loot Tables/";
+        public static string XMLAnotation = "*.xml";
+        public static string XMLFileAnotation = ".xml";
     }
 }
