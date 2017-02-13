@@ -21,12 +21,33 @@ namespace Loot_Randomizer {
             }
         }
 
-        public Loot() {
+        public Loot (string name, int dropChance, int minimumDropAmount, int maximumDropAmount, int dropAmount) {
+            lootName = name;
+            lootDropChance = dropChance;
+            lootMinimumDropAmount = minimumDropAmount;
+            lootMaximumDropAmount = maximumDropAmount;
+            lootDropAmount = dropAmount;
+        }
 
+        public Loot() { }
+
+        public bool getLootDrop(Random rnd) {
+            double random = rnd.NextDouble();
+            return random * 100 < lootDropChance;
         }
 
         public override string ToString() {
-            return lootName + ", DropChance: " + lootDropChance + ", lootMinimumDropAmount: " + lootMinimumDropAmount + ", lootMaximumDropAmount: " + lootMaximumDropAmount + ", lootDropAmount: " + lootDropAmount;
+            string str = lootName + ", DropChance: " + lootDropChance;
+            if(lootMinimumDropAmount > 0) {
+                str += ", LootminimumDropAmount: " + lootMinimumDropAmount;
+            }
+            if(lootMaximumDropAmount > 0) {
+                str += ", lootMaximumDropAmount: " + lootMaximumDropAmount;
+            }
+            if(lootDropAmount > 0) {
+                str += ", lootDropAmount: " + lootDropAmount;
+            }
+            return str;
         }
     }
 }

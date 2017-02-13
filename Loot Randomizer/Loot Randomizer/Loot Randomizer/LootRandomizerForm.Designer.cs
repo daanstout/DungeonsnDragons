@@ -32,28 +32,30 @@
             // 
             this.LootTablesComboBox.Font = new System.Drawing.Font("Bookman Old Style", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LootTablesComboBox.FormattingEnabled = true;
-            this.LootTablesComboBox.Location = new System.Drawing.Point(12, 27);
+            this.LootTablesComboBox.Location = new System.Drawing.Point(16, 29);
             this.LootTablesComboBox.Name = "LootTablesComboBox";
-            this.LootTablesComboBox.Size = new System.Drawing.Size(121, 23);
+            this.LootTablesComboBox.Size = new System.Drawing.Size(159, 23);
             this.LootTablesComboBox.TabIndex = 0;
             // 
             // generateLootButton
             // 
             this.generateLootButton.Font = new System.Drawing.Font("Bookman Old Style", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.generateLootButton.Location = new System.Drawing.Point(139, 27);
+            this.generateLootButton.Location = new System.Drawing.Point(185, 29);
             this.generateLootButton.Name = "generateLootButton";
-            this.generateLootButton.Size = new System.Drawing.Size(113, 23);
+            this.generateLootButton.Size = new System.Drawing.Size(151, 25);
             this.generateLootButton.TabIndex = 1;
             this.generateLootButton.Text = "Generate Loot";
             this.generateLootButton.UseVisualStyleBackColor = true;
+            this.generateLootButton.Click += new System.EventHandler(this.generateLootButton_Click);
             // 
             // lootRandomizerForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(264, 83);
+            this.ClientSize = new System.Drawing.Size(352, 90);
             this.Controls.Add(this.generateLootButton);
             this.Controls.Add(this.LootTablesComboBox);
+            this.Font = new System.Drawing.Font("Bookman Old Style", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "lootRandomizerForm";
             this.Text = "Loot Randomizer";
