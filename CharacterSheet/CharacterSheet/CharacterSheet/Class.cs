@@ -10,10 +10,11 @@ namespace CharacterSheet {
         public string description { get; }
         public Referal.hitDie hitDie { get; }
         public string primaryAbility { get; }
-        public string savingThrowProficiencies { get; }
+        //public string savingThrowProficiencies { get; }
+        public byte savingThrowProficiencies { get; }
         public string armorAndWeaponProficiencies { get; }
 
-        public CharacterClass(string className, string description, Referal.hitDie hitDie, string primaryAbility, string savingThrowProficiencies, string armorAndWeaponProficiencies) {
+        public CharacterClass(string className, string description, Referal.hitDie hitDie, string primaryAbility, byte savingThrowProficiencies, string armorAndWeaponProficiencies) {
             this.className = className;
             this.description = description;
             this.hitDie = hitDie;

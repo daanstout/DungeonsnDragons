@@ -131,6 +131,10 @@ namespace CharacterSheet {
                 }else {
                     currentHealthLabel.ForeColor = Color.FromArgb(39, 175, 47);
                 }
+
+
+                string[] savingThrows = character.characterClass.savingThrowProficiencies.Split('/');
+                foreach (string str in savingThrows) Console.WriteLine(str);
             }
         }
 

@@ -54,11 +54,23 @@
             this.maxHealthLabel = new System.Windows.Forms.Label();
             this.currentHealthLabel = new System.Windows.Forms.Label();
             this.temporaryHealthLabel = new System.Windows.Forms.Label();
+            this.strengthSavingThrowPictureBox = new System.Windows.Forms.PictureBox();
+            this.dexteritySavingThrowPictureBox = new System.Windows.Forms.PictureBox();
+            this.charismaSavingThrowPictureBox = new System.Windows.Forms.PictureBox();
+            this.ConstitutionPictureBox = new System.Windows.Forms.PictureBox();
+            this.wisdomSavingThrowPictureBox = new System.Windows.Forms.PictureBox();
+            this.intelligenceSavingThrowPictureBox = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.inspirationPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.healFullPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.removeHealthPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.addHealthPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sheetPictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.strengthSavingThrowPictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dexteritySavingThrowPictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.charismaSavingThrowPictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ConstitutionPictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.wisdomSavingThrowPictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.intelligenceSavingThrowPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // characterNameLabel
@@ -388,11 +400,71 @@
             this.temporaryHealthLabel.TabIndex = 29;
             this.temporaryHealthLabel.Text = "T";
             // 
+            // strengthSavingThrowPictureBox
+            // 
+            this.strengthSavingThrowPictureBox.BackColor = System.Drawing.Color.White;
+            this.strengthSavingThrowPictureBox.Location = new System.Drawing.Point(136, 246);
+            this.strengthSavingThrowPictureBox.Name = "strengthSavingThrowPictureBox";
+            this.strengthSavingThrowPictureBox.Size = new System.Drawing.Size(10, 10);
+            this.strengthSavingThrowPictureBox.TabIndex = 30;
+            this.strengthSavingThrowPictureBox.TabStop = false;
+            // 
+            // dexteritySavingThrowPictureBox
+            // 
+            this.dexteritySavingThrowPictureBox.BackColor = System.Drawing.Color.White;
+            this.dexteritySavingThrowPictureBox.Location = new System.Drawing.Point(136, 263);
+            this.dexteritySavingThrowPictureBox.Name = "dexteritySavingThrowPictureBox";
+            this.dexteritySavingThrowPictureBox.Size = new System.Drawing.Size(10, 10);
+            this.dexteritySavingThrowPictureBox.TabIndex = 31;
+            this.dexteritySavingThrowPictureBox.TabStop = false;
+            // 
+            // charismaSavingThrowPictureBox
+            // 
+            this.charismaSavingThrowPictureBox.BackColor = System.Drawing.Color.White;
+            this.charismaSavingThrowPictureBox.Location = new System.Drawing.Point(136, 333);
+            this.charismaSavingThrowPictureBox.Name = "charismaSavingThrowPictureBox";
+            this.charismaSavingThrowPictureBox.Size = new System.Drawing.Size(10, 10);
+            this.charismaSavingThrowPictureBox.TabIndex = 32;
+            this.charismaSavingThrowPictureBox.TabStop = false;
+            // 
+            // ConstitutionPictureBox
+            // 
+            this.ConstitutionPictureBox.BackColor = System.Drawing.Color.White;
+            this.ConstitutionPictureBox.Location = new System.Drawing.Point(136, 281);
+            this.ConstitutionPictureBox.Name = "ConstitutionPictureBox";
+            this.ConstitutionPictureBox.Size = new System.Drawing.Size(10, 10);
+            this.ConstitutionPictureBox.TabIndex = 33;
+            this.ConstitutionPictureBox.TabStop = false;
+            // 
+            // wisdomSavingThrowPictureBox
+            // 
+            this.wisdomSavingThrowPictureBox.BackColor = System.Drawing.Color.White;
+            this.wisdomSavingThrowPictureBox.Location = new System.Drawing.Point(136, 315);
+            this.wisdomSavingThrowPictureBox.Name = "wisdomSavingThrowPictureBox";
+            this.wisdomSavingThrowPictureBox.Size = new System.Drawing.Size(10, 10);
+            this.wisdomSavingThrowPictureBox.TabIndex = 34;
+            this.wisdomSavingThrowPictureBox.TabStop = false;
+            // 
+            // intelligenceSavingThrowPictureBox
+            // 
+            this.intelligenceSavingThrowPictureBox.BackColor = System.Drawing.Color.White;
+            this.intelligenceSavingThrowPictureBox.Location = new System.Drawing.Point(136, 298);
+            this.intelligenceSavingThrowPictureBox.Name = "intelligenceSavingThrowPictureBox";
+            this.intelligenceSavingThrowPictureBox.Size = new System.Drawing.Size(10, 10);
+            this.intelligenceSavingThrowPictureBox.TabIndex = 35;
+            this.intelligenceSavingThrowPictureBox.TabStop = false;
+            // 
             // Sheet
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(817, 741);
+            this.ClientSize = new System.Drawing.Size(817, 1045);
+            this.Controls.Add(this.intelligenceSavingThrowPictureBox);
+            this.Controls.Add(this.wisdomSavingThrowPictureBox);
+            this.Controls.Add(this.ConstitutionPictureBox);
+            this.Controls.Add(this.charismaSavingThrowPictureBox);
+            this.Controls.Add(this.dexteritySavingThrowPictureBox);
+            this.Controls.Add(this.strengthSavingThrowPictureBox);
             this.Controls.Add(this.temporaryHealthLabel);
             this.Controls.Add(this.currentHealthLabel);
             this.Controls.Add(this.maxHealthLabel);
@@ -435,6 +507,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.removeHealthPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.addHealthPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sheetPictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.strengthSavingThrowPictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dexteritySavingThrowPictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.charismaSavingThrowPictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ConstitutionPictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.wisdomSavingThrowPictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.intelligenceSavingThrowPictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -472,5 +550,11 @@
         private System.Windows.Forms.Label maxHealthLabel;
         private System.Windows.Forms.Label currentHealthLabel;
         private System.Windows.Forms.Label temporaryHealthLabel;
+        private System.Windows.Forms.PictureBox strengthSavingThrowPictureBox;
+        private System.Windows.Forms.PictureBox dexteritySavingThrowPictureBox;
+        private System.Windows.Forms.PictureBox charismaSavingThrowPictureBox;
+        private System.Windows.Forms.PictureBox ConstitutionPictureBox;
+        private System.Windows.Forms.PictureBox wisdomSavingThrowPictureBox;
+        private System.Windows.Forms.PictureBox intelligenceSavingThrowPictureBox;
     }
 }
