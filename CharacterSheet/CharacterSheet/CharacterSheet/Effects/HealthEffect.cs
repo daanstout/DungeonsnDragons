@@ -6,6 +6,6 @@ using System.Threading.Tasks;
 
 namespace CharacterSheet {
     class HealthEffect {
-        public string effectName
+        //public string effectName
     }
 }
