@@ -53,6 +53,7 @@
             this.armorClassLabel = new System.Windows.Forms.Label();
             this.maxHealthLabel = new System.Windows.Forms.Label();
             this.currentHealthLabel = new System.Windows.Forms.Label();
+            this.temporaryHealthLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.inspirationPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.healFullPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.removeHealthPictureBox)).BeginInit();
@@ -211,6 +212,7 @@
             this.healFullPictureBox.Size = new System.Drawing.Size(60, 60);
             this.healFullPictureBox.TabIndex = 3;
             this.healFullPictureBox.TabStop = false;
+            this.healFullPictureBox.Click += new System.EventHandler(this.healFullPictureBox_Click);
             // 
             // removeHealthPictureBox
             // 
@@ -220,6 +222,7 @@
             this.removeHealthPictureBox.Size = new System.Drawing.Size(30, 30);
             this.removeHealthPictureBox.TabIndex = 2;
             this.removeHealthPictureBox.TabStop = false;
+            this.removeHealthPictureBox.Click += new System.EventHandler(this.removeHealthPictureBox_Click);
             // 
             // addHealthPictureBox
             // 
@@ -374,11 +377,23 @@
             this.currentHealthLabel.TabIndex = 28;
             this.currentHealthLabel.Text = "T";
             // 
+            // temporaryHealthLabel
+            // 
+            this.temporaryHealthLabel.AutoSize = true;
+            this.temporaryHealthLabel.BackColor = System.Drawing.Color.White;
+            this.temporaryHealthLabel.Font = new System.Drawing.Font("Bookman Old Style", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.temporaryHealthLabel.Location = new System.Drawing.Point(468, 183);
+            this.temporaryHealthLabel.Name = "temporaryHealthLabel";
+            this.temporaryHealthLabel.Size = new System.Drawing.Size(28, 25);
+            this.temporaryHealthLabel.TabIndex = 29;
+            this.temporaryHealthLabel.Text = "T";
+            // 
             // Sheet
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(817, 1039);
+            this.ClientSize = new System.Drawing.Size(817, 741);
+            this.Controls.Add(this.temporaryHealthLabel);
             this.Controls.Add(this.currentHealthLabel);
             this.Controls.Add(this.maxHealthLabel);
             this.Controls.Add(this.armorClassLabel);
@@ -414,6 +429,7 @@
             this.Text = "Sheet";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Sheet_FormClosed);
             this.Load += new System.EventHandler(this.Sheet_Load);
+            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Sheet_KeyUp);
             ((System.ComponentModel.ISupportInitialize)(this.inspirationPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.healFullPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.removeHealthPictureBox)).EndInit();
@@ -455,5 +471,6 @@
         private System.Windows.Forms.Label armorClassLabel;
         private System.Windows.Forms.Label maxHealthLabel;
         private System.Windows.Forms.Label currentHealthLabel;
+        private System.Windows.Forms.Label temporaryHealthLabel;
     }
 }
