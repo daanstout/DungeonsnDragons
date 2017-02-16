@@ -30,6 +30,10 @@ namespace Loot_Randomizer {
             lootFamilyList.Add(lootFamily);
         }
 
+        public override string ToString() {
+            return lootTableName;
+        }
+
         public void printTable() {
             Console.WriteLine("Printing LootTable: " + lootTableName);
             Console.WriteLine("Loot:");

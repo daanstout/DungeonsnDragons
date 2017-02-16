@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Loot_Randomizer {
-    public class Loot {
+    public class Loot : lootInheritanceClass {
         public string lootName { get; set; }
         public int lootDropChance { get; set; }
         public int lootMinimumDropAmount { get; set; }

@@ -10,8 +10,18 @@ using System.Windows.Forms;
 
 namespace Loot_Randomizer {
     public partial class GeneratedLoot : Form {
-        public GeneratedLoot() {
+        List<lootInheritanceClass> obtainedLoot;
+
+        public GeneratedLoot(List<lootInheritanceClass> obtainedLoot) {
             InitializeComponent();
+
+            this.obtainedLoot = obtainedLoot;
+
+            generatedLootInit();
+        }
+
+        public void generatedLootInit() {
+
         }
     }
 }

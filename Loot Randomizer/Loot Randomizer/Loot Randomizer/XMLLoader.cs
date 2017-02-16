@@ -14,7 +14,7 @@ namespace Loot_Randomizer {
         delegate int del(XmlNode x);
         del sane = x => int.Parse(x.InnerText);
 
-        public LootTable importLootTable(string fileName) {
+        public void importLootTable(string fileName, ref List<LootTable> tableList) {
             LootTable lootTable = new LootTable();
 
             try {
@@ -25,12 +25,17 @@ namespace Loot_Randomizer {
                 XmlNodeList objects = root.ChildNodes;
 
                 if (root.Name.Equals("lootTable")) {
-                    return obtainTable(objects);
+                    tableList.Add(obtainTable(objects));
+                }else if (root.Name.Equals("lootTableFamily")) {
+                    foreach(XmlNode i in objects) {
+                        if (i.Name.Equals("lootTable")) {
+                            tableList.Add(obtainTable(i.ChildNodes));
+                        }
+                    }
                 }
             } catch (Exception e) {
-
+                Console.WriteLine(e);
             }
-            return new LootTable(); ;
         }
 
         private LootTable obtainTable(XmlNodeList objects) {
@@ -69,24 +74,22 @@ namespace Loot_Randomizer {
                         break;
                     case "lootFamily":
                         LootFamily lf = new LootFamily();
-                        int ldc, lmida, lmada, lda;
-                        ldc = lmida = lmada = lda = 0;
                         foreach (XmlNode j in i) {
                             switch (j.Name) {
                                 case "lootDropChance":
-                                    ldc = sane(j);
+                                    lf.lootDropChance = sane(j);
                                     break;
                                 case "lootMinimumDropAmount":
-                                    lmida = sane(j);
+                                    lf.lootMinimumDropAmount = sane(j);
                                     break;
                                 case "lootMaximumDropAmount":
-                                    lmada = sane(j);
+                                    lf.lootMaximumDropAmount = sane(j);
                                     break;
                                 case "lootDropAmount":
-                                    lda = sane(j);
+                                    lf.lootDropAmount = sane(j);
                                     break;
                                 case "loot":
-                                    lf.addLoot(new Loot(j.InnerText, ldc, lmida, lmada, lda));
+                                    lf.addLoot(new Loot(j.InnerText));
                                     break;
                                 default:
                                     MessageBox.Show("Onbekend object type: " + j.Name, "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);

@@ -57,6 +57,7 @@
     </Compile>
     <Compile Include="Loot.cs" />
     <Compile Include="LootFamily.cs" />
+    <Compile Include="lootInheritanceClass.cs" />
     <Compile Include="LootRandomizerForm.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Loot_Randomizer {
-    public class LootFamily {
+    public class LootFamily : lootInheritanceClass {
         public List<Loot> lootFamily { get; }
         public int lootDropChance { get; set; }
         public int lootMinimumDropAmount { get; set; }
