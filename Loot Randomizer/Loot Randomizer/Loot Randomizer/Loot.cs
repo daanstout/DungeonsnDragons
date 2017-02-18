@@ -12,7 +12,7 @@ namespace Loot_Randomizer {
         public int lootMinimumDropAmount { get; set; }
         public int lootMaximumDropAmount { get; set; }
         public int lootDropAmount { get; set; }
-        
+
         public Loot(string name) {
             if (!name.Equals("")) {
                 lootName = name;
@@ -21,7 +21,7 @@ namespace Loot_Randomizer {
             }
         }
 
-        public Loot (string name, int dropChance, int minimumDropAmount, int maximumDropAmount, int dropAmount) {
+        public Loot(string name, int dropChance, int minimumDropAmount, int maximumDropAmount, int dropAmount) {
             lootName = name;
             lootDropChance = dropChance;
             lootMinimumDropAmount = minimumDropAmount;
@@ -38,13 +38,13 @@ namespace Loot_Randomizer {
 
         public override string ToString() {
             string str = lootName + ", DropChance: " + lootDropChance;
-            if(lootMinimumDropAmount > 0) {
+            if (lootMinimumDropAmount > 0) {
                 str += ", LootminimumDropAmount: " + lootMinimumDropAmount;
             }
-            if(lootMaximumDropAmount > 0) {
+            if (lootMaximumDropAmount > 0) {
                 str += ", lootMaximumDropAmount: " + lootMaximumDropAmount;
             }
-            if(lootDropAmount > 0) {
+            if (lootDropAmount > 0) {
                 str += ", lootDropAmount: " + lootDropAmount;
             }
             return str;

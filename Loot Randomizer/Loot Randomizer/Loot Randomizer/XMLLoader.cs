@@ -26,8 +26,8 @@ namespace Loot_Randomizer {
 
                 if (root.Name.Equals("lootTable")) {
                     tableList.Add(obtainTable(objects));
-                }else if (root.Name.Equals("lootTableFamily")) {
-                    foreach(XmlNode i in objects) {
+                } else if (root.Name.Equals("lootTableFamily")) {
+                    foreach (XmlNode i in objects) {
                         if (i.Name.Equals("lootTable")) {
                             tableList.Add(obtainTable(i.ChildNodes));
                         }
@@ -103,9 +103,6 @@ namespace Loot_Randomizer {
                         break;
                 }
             }
-
-            //lootTable.printTable();
-
             return lootTable;
         }
     }

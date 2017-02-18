@@ -31,7 +31,7 @@ namespace Loot_Randomizer {
             if (lootDropAmount > 0) {
                 str += ", lootDropAmount: " + lootDropAmount;
             }
-            foreach(Loot loot in lootFamily) {
+            foreach (Loot loot in lootFamily) {
                 str += "\n\t" + loot;
             }
             return str;

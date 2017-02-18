@@ -37,11 +37,11 @@ namespace Loot_Randomizer {
         public void printTable() {
             Console.WriteLine("Printing LootTable: " + lootTableName);
             Console.WriteLine("Loot:");
-            foreach(Loot l in lootList) {
+            foreach (Loot l in lootList) {
                 Console.WriteLine(l);
             }
             Console.WriteLine("LootFamilies:");
-            foreach(LootFamily l in lootFamilyList) {
+            foreach (LootFamily l in lootFamilyList) {
                 Console.WriteLine(l);
             }
         }
