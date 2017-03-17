@@ -22,6 +22,8 @@ namespace CharacterSheet {
             this.startScherm = startScherm;
             this.character = character;
 
+            //sheetPictureBox.Size = new Size(833, 1062);
+
             sheetPictureBox.Image = Referal.ResizeImage(Resources.CharacterSheetAdjusted, sheetPictureBox.Width, sheetPictureBox.Height);
         }
 

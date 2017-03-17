@@ -262,7 +262,7 @@
             this.proficiencyLabel.AutoSize = true;
             this.proficiencyLabel.BackColor = System.Drawing.Color.White;
             this.proficiencyLabel.Font = new System.Drawing.Font("Bookman Old Style", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.proficiencyLabel.Location = new System.Drawing.Point(135, 199);
+            this.proficiencyLabel.Location = new System.Drawing.Point(134, 200);
             this.proficiencyLabel.Name = "proficiencyLabel";
             this.proficiencyLabel.Size = new System.Drawing.Size(21, 20);
             this.proficiencyLabel.TabIndex = 17;

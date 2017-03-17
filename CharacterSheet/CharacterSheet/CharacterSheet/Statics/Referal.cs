@@ -153,7 +153,7 @@ namespace CharacterSheet {
         public static int getProficiency(int level) {
             int proficiency = 2;
             foreach (int i in Configurable.proficiencyUpList) {
-                if(level == i) proficiency++;
+                if(level >= i) proficiency++;
             }
             return proficiency;
         }
