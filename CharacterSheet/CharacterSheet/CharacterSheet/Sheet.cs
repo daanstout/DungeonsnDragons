@@ -135,8 +135,10 @@ namespace CharacterSheet {
                 }
 
 
-                string[] savingThrows = character.characterClass.savingThrowProficiencies.Split('/');
-                foreach (string str in savingThrows) Console.WriteLine(str);
+                hitDieLabel.Text = character.characterClass.hitDie.ToString();
+
+                //string[] savingThrows = character.characterClass.savingThrowProficiencies.Split('/');
+                //foreach (string str in savingThrows) Console.WriteLine(str);
             }
         }
 

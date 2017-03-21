@@ -60,6 +60,7 @@
             this.ConstitutionPictureBox = new System.Windows.Forms.PictureBox();
             this.wisdomSavingThrowPictureBox = new System.Windows.Forms.PictureBox();
             this.intelligenceSavingThrowPictureBox = new System.Windows.Forms.PictureBox();
+            this.hitDieLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.inspirationPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.healFullPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.removeHealthPictureBox)).BeginInit();
@@ -454,11 +455,23 @@
             this.intelligenceSavingThrowPictureBox.TabIndex = 35;
             this.intelligenceSavingThrowPictureBox.TabStop = false;
             // 
+            // hitDieLabel
+            // 
+            this.hitDieLabel.AutoSize = true;
+            this.hitDieLabel.BackColor = System.Drawing.Color.White;
+            this.hitDieLabel.Font = new System.Drawing.Font("Bookman Old Style", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.hitDieLabel.Location = new System.Drawing.Point(571, 188);
+            this.hitDieLabel.Name = "hitDieLabel";
+            this.hitDieLabel.Size = new System.Drawing.Size(41, 40);
+            this.hitDieLabel.TabIndex = 36;
+            this.hitDieLabel.Text = "T";
+            // 
             // Sheet
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(817, 1045);
+            this.ClientSize = new System.Drawing.Size(817, 741);
+            this.Controls.Add(this.hitDieLabel);
             this.Controls.Add(this.intelligenceSavingThrowPictureBox);
             this.Controls.Add(this.wisdomSavingThrowPictureBox);
             this.Controls.Add(this.ConstitutionPictureBox);
@@ -556,5 +569,6 @@
         private System.Windows.Forms.PictureBox ConstitutionPictureBox;
         private System.Windows.Forms.PictureBox wisdomSavingThrowPictureBox;
         private System.Windows.Forms.PictureBox intelligenceSavingThrowPictureBox;
+        private System.Windows.Forms.Label hitDieLabel;
     }
 }
