@@ -10,11 +10,13 @@ namespace CharacterSheet {
 
         public string name { get; }
         public int score { get; set; }
+        public bool advantage { get; set; }
 
-        public AbilityScore(string N, int SC, List<SubAbilityScore> SA) {
-            name = N;
-            score = SC;
-            subAbilities = SA;
+        public AbilityScore(string name, int score, List<SubAbilityScore> subAbilities, bool advantage) {
+            this.name = name;
+            this.score = score;
+            this.subAbilities = subAbilities;
+            this.advantage = advantage;
         }
 
         public override string ToString() {

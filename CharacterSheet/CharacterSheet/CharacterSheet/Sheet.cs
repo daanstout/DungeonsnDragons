@@ -22,7 +22,7 @@ namespace CharacterSheet {
             this.startScherm = startScherm;
             this.character = character;
 
-            //sheetPictureBox.Size = new Size(833, 1062);
+            //sheetPictureBox.Size = new Size(833, 1084);
 
             sheetPictureBox.Image = Referal.ResizeImage(Resources.CharacterSheetAdjusted, sheetPictureBox.Width, sheetPictureBox.Height);
         }
@@ -165,6 +165,7 @@ namespace CharacterSheet {
         }
 
         private void addHealthPictureBox_Click(object sender, EventArgs e) {
+            Console.WriteLine("ADD");
             int characterMaxHealth = 0;
             int characterTemporaryHealth = 0;
             try {
@@ -184,11 +185,16 @@ namespace CharacterSheet {
         }
 
         private void removeHealthPictureBox_Click(object sender, EventArgs e) {
+            Console.WriteLine("Start");
+            Console.WriteLine(character.characterCurrentHealth);
             character.characterCurrentHealth -= (shiftPressed ? 5 : 1);
-
+            Console.WriteLine(character.characterCurrentHealth);
             character.unconscious = character.characterCurrentHealth < 0;
 
             currentHealthLabel.Text = character.characterCurrentHealth.ToString();
+            sheetPictureBox.Invalidate();
+            Console.WriteLine(currentHealthLabel);
+            Console.WriteLine("End\n");
         }
 
         private void healFullPictureBox_Click(object sender, EventArgs e) {
@@ -207,3 +213,4 @@ namespace CharacterSheet {
         }
     }
 }
+

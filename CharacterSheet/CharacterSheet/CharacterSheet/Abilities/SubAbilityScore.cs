@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 namespace CharacterSheet {
     public class SubAbilityScore {
         public string name { get; }
-        public int score { get; set; }
+        public bool advantage { get; set; }
 
-        public SubAbilityScore(string N, int S) {
-            name = N;
-            score = S;
+        public SubAbilityScore(string name, bool advantage) {
+            this.name = name;
+            this.advantage = advantage; 
         }
     }
 }

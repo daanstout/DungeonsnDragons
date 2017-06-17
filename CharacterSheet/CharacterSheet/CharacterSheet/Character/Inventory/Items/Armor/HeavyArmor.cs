@@ -8,7 +8,7 @@ namespace CharacterSheet {
     class HeavyArmor : Armor {
         public int minimumStrength { get; }
 
-        public HeavyArmor(string armorMaterial, int baseArmor, bool stealthDisadvantage, int weigth, int minimumStrength) : base(armorMaterial, baseArmor, stealthDisadvantage, weigth) {
+        public HeavyArmor(string name, int weigth, int worth, int baseArmor, bool stealthDisadvantage, int minimumStrength) : base(name, weigth, worth, baseArmor, stealthDisadvantage) {
             this.minimumStrength = minimumStrength;
         }
     }

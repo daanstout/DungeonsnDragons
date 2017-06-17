@@ -470,7 +470,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(817, 741);
+            this.ClientSize = new System.Drawing.Size(817, 1035);
             this.Controls.Add(this.hitDieLabel);
             this.Controls.Add(this.intelligenceSavingThrowPictureBox);
             this.Controls.Add(this.wisdomSavingThrowPictureBox);

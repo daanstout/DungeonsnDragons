@@ -51,17 +51,19 @@
   <ItemGroup>
     <Compile Include="Abilities\AbilityScore.cs" />
     <Compile Include="Abilities\AbilityScoreField.cs" />
-    <Compile Include="Armor\Armor.cs" />
-    <Compile Include="Character.cs" />
-    <Compile Include="Class.cs" />
+    <Compile Include="Character\Inventory\Inventory.cs" />
+    <Compile Include="Character\Inventory\Items\Armor\Armor.cs" />
+    <Compile Include="Character\Character.cs" />
+    <Compile Include="Character\Class.cs" />
+    <Compile Include="Character\Inventory\Items\Item.cs" />
     <Compile Include="Effects\Effect.cs" />
     <Compile Include="Statics\Configurable.cs" />
     <Compile Include="Statics\Fonts.cs" />
     <Compile Include="Effects\HealthEffect.cs" />
-    <Compile Include="Armor\HeavyArmor.cs" />
-    <Compile Include="Armor\LightArmor.cs" />
-    <Compile Include="Armor\MediumArmor.cs" />
-    <Compile Include="Race.cs" />
+    <Compile Include="Character\Inventory\Items\Armor\HeavyArmor.cs" />
+    <Compile Include="Character\Inventory\Items\Armor\LightArmor.cs" />
+    <Compile Include="Character\Inventory\Items\Armor\MediumArmor.cs" />
+    <Compile Include="Character\Race.cs" />
     <Compile Include="Statics\Referal.cs" />
     <Compile Include="Sheet.cs">
       <SubType>Form</SubType>

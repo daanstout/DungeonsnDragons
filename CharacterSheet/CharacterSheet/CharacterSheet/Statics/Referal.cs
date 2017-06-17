@@ -20,13 +20,6 @@ namespace CharacterSheet {
         public static string Half_Orc = "Half-Orc";
         public static string Tiefling = "Tiefling";
 
-        //public static int D4 = 4;
-        //public static int D6 = 6;
-        //public static int D8 = 8;
-        //public static int D10 = 10;
-        //public static int D12 = 12;
-        //public static int D20 = 20;
-
         public enum hitDie {
             D4 = 4,
             D6 = 6,
@@ -42,6 +35,13 @@ namespace CharacterSheet {
         public static string Intelligence = "Intelligence";
         public static string Wisdom = "Wisdom";
         public static string Charisma = "Charisma";
+
+        public static List<CharacterClass> StrengthSaving = new List<CharacterClass>() { Barbarian, Fighter, Monk, Ranger };
+        public static List<CharacterClass> DexteritySaving = new List<CharacterClass>() { Bard, Monk, Ranger, Rogue };
+        public static List<CharacterClass> ConstitutionSaving = new List<CharacterClass>() { Barbarian, Fighter, Sorcerer };
+        public static List<CharacterClass> IntelligenceSaving = new List<CharacterClass>() { Druid, Rogue, Wizard };
+        public static List<CharacterClass> WisdomSaving = new List<CharacterClass>() { Cleric, Druid, Paladin, Warlock, Wizard };
+        public static List<CharacterClass> CharismaSaving = new List<CharacterClass>() { Bard, Cleric, Paladin, Sorcerer, Warlock };
 
         public static string Acrobatics = "Acrobatis";
         public static string Animal_Handling = "Animal Handling";
@@ -99,20 +99,20 @@ namespace CharacterSheet {
         public static CharacterClass Warlock = new CharacterClass("Warlock", "A wielder of magic that is derived from a bargain with an extraplaner entity", hitDie.D8, Charisma, Wisdom + "/" + Charisma, "Light armor, simple weapons");
         public static CharacterClass Wizard = new CharacterClass("Wizard", "A scholarly magic-user capable of manipulating the structures of reality", hitDie.D6, Intelligence, Intelligence + "/" + Wisdom, "Daggers, dards, slings, quarterstaffs, light crossbows");
 
-        public static Armor Padded = new LightArmor("Padded", 11, true, 8);
-        public static Armor Leather = new LightArmor("Leather", 11, false, 10);
-        public static Armor Studded_Leather = new LightArmor("Studded_Leather", 12, false, 13);
+        public static Armor Padded = new LightArmor("Padded", 8, 5, 11, true);
+        public static Armor Leather = new LightArmor("Leather", 10, 10, 11, false);
+        public static Armor Studded_Leather = new LightArmor("Studded_Leather", 13, 45, 12, false);
 
-        public static Armor Hide = new MediumArmor("Hide", 12, false, 12);
-        public static Armor Chain_Shirt = new MediumArmor("Chain Shirt", 13, false, 20);
-        public static Armor Scale_Mail = new MediumArmor("Scale Mail", 14, true, 45);
-        public static Armor Breastplate = new MediumArmor("Breastplate", 14, false, 20);
-        public static Armor Half_Plate = new MediumArmor("Half Plate", 15, true, 40);
+        public static Armor Hide = new MediumArmor("Hide", 12, 10, 12, false);
+        public static Armor Chain_Shirt = new MediumArmor("Chain Shirt", 20, 50, 13, false);
+        public static Armor Scale_Mail = new MediumArmor("Scale Mail", 45, 50, 14, true);
+        public static Armor Breastplate = new MediumArmor("Breastplate", 20, 400, 14, false);
+        public static Armor Half_Plate = new MediumArmor("Half Plate", 40, 750, 15, true);
 
-        public static Armor Ring_Mail = new HeavyArmor("Ring Mail", 14, true, 40, 0);
-        public static Armor Chain_Mail = new HeavyArmor("Chain Mail", 16, true, 55, 13);
-        public static Armor Splint = new HeavyArmor("Splint", 17, true, 60, 15);
-        public static Armor Plate = new HeavyArmor("Plate", 18, true, 65, 15);
+        public static Armor Ring_Mail = new HeavyArmor("Ring Mail", 40, 30, 14, true, 0);
+        public static Armor Chain_Mail = new HeavyArmor("Chain Mail", 55, 75, 16, true, 13);
+        public static Armor Splint = new HeavyArmor("Splint", 60, 200, 17, true, 15);
+        public static Armor Plate = new HeavyArmor("Plate", 65, 1500, 18, true, 15);
 
         public static int getMaxHitPoints(hitDie hpDie, int constitutionModifier, int level) {
             return (int)((int)hpDie + constitutionModifier + ((Math.Ceiling((double)(hpDie + 1) / 2)) + constitutionModifier) * (level - 1));
@@ -133,7 +133,7 @@ namespace CharacterSheet {
 
             if (armor is LightArmor) {
                 bonusArmor = modifier;
-            }else if(armor is MediumArmor) {
+            } else if (armor is MediumArmor) {
                 bonusArmor = modifier > 2 ? 2 : modifier;
             }
 
@@ -153,7 +153,7 @@ namespace CharacterSheet {
         public static int getProficiency(int level) {
             int proficiency = 2;
             foreach (int i in Configurable.proficiencyUpList) {
-                if(level >= i) proficiency++;
+                if (level >= i) proficiency++;
             }
             return proficiency;
         }
@@ -253,13 +253,16 @@ namespace CharacterSheet {
         }
 
         public static void setLabelForeColorProficiency(int modifier, ref Label label) {
-            if(modifier > 0) {
+            if (modifier > 0) {
                 label.ForeColor = Color.Green;
-            }else if(modifier < 0) {
+            } else if (modifier < 0) {
                 label.ForeColor = Color.Red;
-            }else {
+            } else {
                 label.ForeColor = Color.Black;
             }
         }
+    }
+
+    public class Class {
     }
 }

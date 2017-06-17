@@ -23,8 +23,12 @@ namespace CharacterSheet {
         public int characterTemporaryHealth { get; set; }
         public bool unconscious { get; set; } = false;
         public bool death { get; set; } = false;
+        public Inventory inventory { get; }
 
-        public Character(string characterName, CharacterClass characterClass, uint characterLevel, string characterBackground, string playerName, string characterRace, string characterAlignment, int characterExperience, AbilityScoreField scores, string adventureGroup, Armor characterArmor, bool characterShield) {
+        public Character(string characterName, CharacterClass characterClass, uint characterLevel, string characterBackground, string playerName, string characterRace, string characterAlignment, int characterExperience, string adventureGroup, Armor characterArmor, bool characterShield) {
+            inventory = new Inventory(this);
+            abilityScores = new AbilityScoreField(this);
+
             this.characterName = characterName;
             this.characterClass = characterClass;
             this.characterLevel = characterLevel;
@@ -33,7 +37,6 @@ namespace CharacterSheet {
             this.characterRace = characterRace;
             this.characterAlignment = characterAlignment;
             this.characterExperience = characterExperience;
-            abilityScores = scores;
             this.adventureGroup = adventureGroup;
             inspiration = false;
             this.characterArmor = characterArmor;
