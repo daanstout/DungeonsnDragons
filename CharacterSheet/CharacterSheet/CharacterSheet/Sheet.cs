@@ -113,11 +113,11 @@ namespace CharacterSheet {
                 temporaryHealthLabel.Text = character.characterTemporaryHealth.ToString();
                 temporaryHealthLabel.Location = new Point((int)(468 + ((e.Graphics.MeasureString("00", temporaryHealthLabel.Font).Width - e.Graphics.MeasureString(temporaryHealthLabel.Text, temporaryHealthLabel.Font).Width) / 2)), temporaryHealthLabel.Location.Y);
 
-                try {
-                    character.characterCurrentHealth = Convert.ToInt32(maxHealthLabel.Text) + Convert.ToInt32(temporaryHealthLabel.Text);
-                }catch (Exception ex) {
-                    Console.WriteLine("error: " + ex);
-                }
+                //try {
+                //    character.characterCurrentHealth = Convert.ToInt32(maxHealthLabel.Text) + Convert.ToInt32(temporaryHealthLabel.Text);
+                //}catch (Exception ex) {
+                //    Console.WriteLine("error: " + ex);
+                //}
 
                 addHealthPictureBox.Image = Referal.ResizeImage(Resources.Green_Plus, addHealthPictureBox.Width, addHealthPictureBox.Height);
                 removeHealthPictureBox.Image = Referal.ResizeImage(Resources.Red_Minus, removeHealthPictureBox.Width, removeHealthPictureBox.Height);
@@ -180,7 +180,7 @@ namespace CharacterSheet {
             if(character.characterCurrentHealth > (characterMaxHealth + characterTemporaryHealth)) {
                 character.characterCurrentHealth = (characterMaxHealth + characterTemporaryHealth);
             }
-
+            sheetPictureBox.Invalidate();
             currentHealthLabel.Text = character.characterCurrentHealth.ToString();
         }
 
