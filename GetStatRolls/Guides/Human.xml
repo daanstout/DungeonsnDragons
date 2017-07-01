@@ -1,0 +1,22 @@
+<?xml version='1.0' ?>
+<ClassGuide>
+	<ClassName>Human</ClassName>
+	
+	<averageStrength>12</averageStrength>
+	<strengthLeeWay>2</strengthLeeWay>
+
+	<averageDexterity>13</averageDexterity>
+	<dexterityLeeWay>2</dexterityLeeWay>
+
+	<averageConstitution>12</averageConstitution>
+	<constitutionLeeWay>3</constitutionLeeWay>
+
+	<averageIntelligence>14</averageIntelligence>
+	<intelligenceLeeWay>2</intelligenceLeeWay>
+
+	<averageWisdom>12</averageWisdom>
+	<wisdomLeeWay>2</wisdomLeeWay>
+
+	<averageCharisma>12</averageCharisma>
+	<charismaLeeWay>5</charismaLeeWay>
+</ClassGuide>

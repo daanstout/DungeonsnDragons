@@ -1,0 +1,22 @@
+<?xml version='1.0' ?>
+<ClassGuide>
+	<ClassName>Wizard</ClassName>
+	
+	<averageStrength>9</averageStrength>
+	<strengthLeeWay>2</strengthLeeWay>
+
+	<averageDexterity>10</averageDexterity>
+	<dexterityLeeWay>2</dexterityLeeWay>
+
+	<averageConstitution>12</averageConstitution>
+	<constitutionLeeWay>3</constitutionLeeWay>
+
+	<averageIntelligence>14</averageIntelligence>
+	<intelligenceLeeWay>4</intelligenceLeeWay>
+
+	<averageWisdom>16</averageWisdom>
+	<wisdomLeeWay>4</wisdomLeeWay>
+
+	<averageCharisma>13</averageCharisma>
+	<charismaLeeWay>3</charismaLeeWay>
+</ClassGuide>

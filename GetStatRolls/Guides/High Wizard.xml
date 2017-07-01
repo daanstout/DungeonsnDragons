@@ -1,0 +1,22 @@
+<?xml version='1.0' ?>
+<ClassGuide>
+	<ClassName>High Wizard</ClassName>
+	
+	<averageStrength>9</averageStrength>
+	<strengthLeeWay>2</strengthLeeWay>
+
+	<averageDexterity>10</averageDexterity>
+	<dexterityLeeWay>2</dexterityLeeWay>
+
+	<averageConstitution>12</averageConstitution>
+	<constitutionLeeWay>3</constitutionLeeWay>
+
+	<averageIntelligence>15</averageIntelligence>
+	<intelligenceLeeWay>4</intelligenceLeeWay>
+
+	<averageWisdom>19</averageWisdom>
+	<wisdomLeeWay>2</wisdomLeeWay>
+
+	<averageCharisma>13</averageCharisma>
+	<charismaLeeWay>3</charismaLeeWay>
+</ClassGuide>
