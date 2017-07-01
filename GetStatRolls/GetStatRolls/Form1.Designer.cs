@@ -1,0 +1,80 @@
+﻿namespace GetStatRolls {
+    partial class GetStatRoll {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing) {
+            if (disposing && (components != null)) {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent() {
+            this.classGuideComboBox = new System.Windows.Forms.ComboBox();
+            this.ResultLabel = new System.Windows.Forms.Label();
+            this.generateStatsButton = new System.Windows.Forms.Button();
+            this.SuspendLayout();
+            // 
+            // classGuideComboBox
+            // 
+            this.classGuideComboBox.FormattingEnabled = true;
+            this.classGuideComboBox.Location = new System.Drawing.Point(12, 12);
+            this.classGuideComboBox.Name = "classGuideComboBox";
+            this.classGuideComboBox.Size = new System.Drawing.Size(121, 23);
+            this.classGuideComboBox.TabIndex = 0;
+            // 
+            // ResultLabel
+            // 
+            this.ResultLabel.AutoSize = true;
+            this.ResultLabel.Location = new System.Drawing.Point(348, 15);
+            this.ResultLabel.Name = "ResultLabel";
+            this.ResultLabel.Size = new System.Drawing.Size(0, 15);
+            this.ResultLabel.TabIndex = 1;
+            // 
+            // generateStatsButton
+            // 
+            this.generateStatsButton.Location = new System.Drawing.Point(13, 57);
+            this.generateStatsButton.Name = "generateStatsButton";
+            this.generateStatsButton.Size = new System.Drawing.Size(103, 23);
+            this.generateStatsButton.TabIndex = 2;
+            this.generateStatsButton.Text = "Generate Stats";
+            this.generateStatsButton.UseVisualStyleBackColor = true;
+            this.generateStatsButton.Click += new System.EventHandler(this.generateStatsButton_Click);
+            // 
+            // GetStatRoll
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(469, 344);
+            this.Controls.Add(this.generateStatsButton);
+            this.Controls.Add(this.ResultLabel);
+            this.Controls.Add(this.classGuideComboBox);
+            this.Font = new System.Drawing.Font("Bookman Old Style", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Name = "GetStatRoll";
+            this.Text = "Get Stats";
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.ComboBox classGuideComboBox;
+        private System.Windows.Forms.Label ResultLabel;
+        private System.Windows.Forms.Button generateStatsButton;
+    }
+}
+
