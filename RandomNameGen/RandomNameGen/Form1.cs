@@ -34,18 +34,18 @@ namespace RandomNameGen {
             FillElfChildList();
             FillElfAdultList();
 
-            Race list = (Race)(raceListComboBox.SelectedItem);
+            Race race = (Race)(raceListComboBox.SelectedItem);
 
-            generatedNameLabel.Text = list.getMaleName;
+            generatedNameLabel.Text = race.getMaleName;
         }
 
         private void generateNameButton_Click(object sender, EventArgs e) {
-            Race list = (Race)raceListComboBox.SelectedItem;
+            Race race = (Race)raceListComboBox.SelectedItem;
 
             if (maleCheckBox.Checked) {
-                generatedNameLabel.Text = list.getMaleName;
+                generatedNameLabel.Text = race.getMaleName;
             } else if (femaleCheckBox.Checked) {
-                generatedNameLabel.Text = list.getFemaleName;
+                generatedNameLabel.Text = race.getFemaleName;
             }
         }
 

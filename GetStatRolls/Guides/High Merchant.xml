@@ -1,0 +1,22 @@
+<?xml version='1.0' ?>
+<ClassGuide>
+	<ClassName>High Merchant</ClassName>
+	
+	<averageStrength>9</averageStrength>
+	<strengthLeeWay>2</strengthLeeWay>
+
+	<averageDexterity>12</averageDexterity>
+	<dexterityLeeWay>2</dexterityLeeWay>
+
+	<averageConstitution>11</averageConstitution>
+	<constitutionLeeWay>2</constitutionLeeWay>
+
+	<averageIntelligence>15</averageIntelligence>
+	<intelligenceLeeWay>3</intelligenceLeeWay>
+
+	<averageWisdom>14</averageWisdom>
+	<wisdomLeeWay>2</wisdomLeeWay>
+
+	<averageCharisma>19</averageCharisma>
+	<charismaLeeWay>2</charismaLeeWay>
+</ClassGuide>
